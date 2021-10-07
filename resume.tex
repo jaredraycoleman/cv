@@ -57,15 +57,25 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubheadingTwo}[8]{
+\newcommand{\resumeSubheadingTwo}[6]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6}
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingThree}[8]{
   \vspace{-1pt}\item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
       \textit{\small#5} & \textit{\small #6} \\
-      \textit{\small#7} & \textit{\small #8} \\
+      \textit{\small#7} & \textit{\small #8} 
     \end{tabular*}\vspace{-5pt}
 }
+
 
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
@@ -93,17 +103,17 @@
 % --------SKILLS------------
 \section{Summary}
 I have a broad interest in computer science.
-My research interests include discrete mathematics, computational geometry, game theory, graph theory, distributed computing, automata theory, programming languages, formal methods, and mobile robotics.
+My research interests include blockchain, mobile robotics, discrete mathematics, computational geometry, game theory, graph theory, and distributed computing.
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {University of Southern California}{Long Beach, CA}
-      {Ph.D. in Computer Science;  GPA: N/A}{Aug 2020 -- Present}
+      {University of Southern California}{Los Angeles, CA}
+      {Ph.D. in Computer Science;  GPA: 4.0}{Aug 2020 -- Present}
     \resumeSubheading
       {California State University, Long Beach}{Long Beach, CA}
-      {Master of Science in Computer Science;  GPA: 4.00}{Aug 2018 -- May 2020}
+      {Master of Science in Computer Science;  GPA: 4.0}{Aug 2018 -- May 2020}
     \resumeSubheading
       {California State University, Long Beach}{Long Beach, CA}
       {Bachelor of Science in Computer Science;  GPA: 3.6}{Aug 2013 -- May 2018}
@@ -114,11 +124,16 @@ My research interests include discrete mathematics, computational geometry, game
 \section{Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheadingTwo
-      {The Aerospace Corporation}{El Segundo, CA}
-      {Casual Member of the Technical Staff}{Aug 2020 -- Present}
-      {Member of the Technical Staff}{Mar 2020 -- Aug 2020}
-      {Associate Member of the Technical Staff}{Sep 2018 -- Mar 2020}
+  
+    \vspace{-1pt}\item[]
+      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{The Aerospace Corporation} & El Segundo, CA \\
+        \textit{\small Casual Member of the Technical Staff} & \textit{\small Aug 2020 -- Present} \\
+        \textit{\small Member of the Technical Staff} & \textit{\small Mar 2020 -- Aug 2020} \\
+        \textit{\small Associate Member of the Technical Staff} & \textit{\small Sep 2018 -- Mar 2020} \\
+        \textit{\small Intern} & \textit{\small Jan 2018 -- Aug 2018} 
+      \end{tabular*}\vspace{-5pt}
+
       \resumeItemListStart
         \item[-]{Develops algorithms for optimizing data-processing pipelines to maximize time and resource efficiency.}
         \item[-]{Helps build simulations for verifying flight software.}
@@ -126,54 +141,49 @@ My research interests include discrete mathematics, computational geometry, game
       \resumeItemListEnd
 
     \resumeSubheading
-      {The Aerospace Corporation}{El Segundo, CA}
-      {Intern}{Jan 2018 -- Aug 2018}
-      \resumeItemListStart
-        \item[-]{Developed tools for automated data processing.}
-        \item[-]{Worked on algorithms for cooperative mobile robotic systems.}
-        \resumeItem{Skills Acquired}
-            {Python, distributed algorithms, graph theory}
-      \resumeItemListEnd
-
-    \resumeSubheading
       {CSULB Research Foundation}{Long Beach, CA}
       {Student Research Assistant}{Mar 2017 -- May 2018}
       \resumeItemListStart
-        \item[-]{Developed software for systems of cooperative robots.}
-        \item[-]{Developed libraries for distributed robotic simulations.}
-        \resumeItem{Skills Acquired}
-          {Matlab, C/C++, distributed computing, data structures, algorithms, computer vision}
+        \item[-]{Developed software and simulations for systems of cooperative robots.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 
+%-----------PUBLICATIONS-----------------
+\section{Publications}
+\resumeSubHeadingListStart
+
+    \resumeSubheadingTwo
+    {Robotic Sorting on the Grid}{}
+    {Jared Coleman, Oscar Morales-Ponce}{}
+    {To Appear at ICDCN 2022 - 23rd International Conference on Distributed Computing and Networking}{}
+    {}{}
+
+    \resumeSubheadingTwo
+    {Message Delivery in the Plane by Robots with Different Speeds}{}
+    {Jared Coleman, Evangelos Kranakis, Oscar Morales-Ponce, Danny Krizanc}{}
+    {To Appear at SSS 2021 - 23rd International Symposium on Stabilization, Safety, and Security of Distributed Systems}{}
+
+    \resumeSubheadingTwo
+    {The Pony Express Communication Problem}{}
+    {Jared Coleman, Evangelos Kranakis, Oscar Morales-Ponce, Danny Krizanc}{}
+    {In Proceedings IWOCA 2021 - 32nd International Workshop on Combinatorial Algorithms}{}
+
+    \resumeSubheadingTwo
+    {Minimizing The Maximum Distance Traveled To Form Patterns With Systems of Mobile Robots}{}
+    {In proceedings CCCG 2020, 32nd Canadian Conference on Computational Geometry, August 5-7, 2020}{}
+    {Jared Coleman, Evangelos Kranakis, Oscar Morales-Ponce, Jorge Urrutia, Birgit Vogtenhuber}{}
+\resumeSubHeadingListEnd
+
 %-----------PROJECTS-----------------
 \section{Projects}
 \resumeSubHeadingListStart
-    \resumeSubheading
-    {Aerocube @ The Beach}{}
-    {California State University, Long Beach}{}
-    \resumeItemListStart
-    \resumeItem{Supervisors}
-        {Dr. Praveen Shankar (PI), Dr. Oscar Morales Ponce (Co-I)}
-    \item[-]{Worked with an interdisciplinary team of student engineers to investigate the capabilities of the Nvidia Jetson TX1 as a computational unit in distributed robotics systems for space.}
-    \item[-]{Developed localization, communication, path planning, and control algorithms.}
-    \resumeItem{Skills Acquired}
-        {C/C++, networking, distributed computing, teamwork, algorithms, software engineering}
-    \resumeItemListEnd
-
-    \resumeSubheading
-    {Master's Thesis}{}
-    {California State University, Long Beach}{}
-    \resumeItemListStart
-    \resumeItem{Committee Chair}{Dr. Oscar Morales Ponce}
-    \resumeItem{Keywords}
-        {pattern formation, computational geometry, mobile robotics}
-    \item[-]{A study on optimal pattern formation. Given a set of robots and a target formation, our goal is to find optimal destinations such that the maximum distance any robot must travel is minimum.}
-    \resumeItemListEnd
+    \resumeSubheadingTwo
+    {Kubishi}{https://kubishi.com}
+    {Indigenous Data Sovereignty}{}
+    {An online dictionary and encyclopedia for Owens Valley Paiute language and culture}{}
 \resumeSubHeadingListEnd
-
 
 %-------------------------------------------
 \end{document}
