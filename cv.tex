@@ -13,7 +13,8 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
+% make links blue, no boxes
+\usepackage[hidelinks, colorlinks=true, urlcolor=blue]{hyperref}
 \usepackage{fancyhdr}
 
 
@@ -95,8 +96,8 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://jaredraycoleman.com/}{\Large Jared Coleman}} & \href{mailto:jaredraycoleman@gmail.com}{jaredraycoleman@gmail.com}\\
-  \href{https://jaredraycoleman.com/}{https://www.jaredraycoleman.com} \\
+  \textbf{\Large Jared Coleman} & \href{mailto:jaredraycoleman@gmail.com}{jaredraycoleman@gmail.com}\\
+  \href{https://jaredraycoleman.com/}{jaredraycoleman.com} \\
 \end{tabular*}
 
 
@@ -160,6 +161,21 @@
 \section{Publications}
 \resumeSubHeadingListStart
     \resumeSubheadingTwo
+    {DARSAN: A Decentralized Review System Suitable for NFT Marketplaces}{}
+    {Sulyab Thottungal Valapu, Tamoghna Sarkar, Jared Ray Coleman, Anusha Avyukt, Hugo Embrechts, Dimitri Torfs, Michele Minelli, Bhaskar Krishnamachari}{}
+    {ICBC 2023 - International Conference on Blockchain}{}
+
+    \resumeSubheadingTwo
+    {Search and Rescue on the Line}{}
+    {Jared Coleman, Lorand Cheng, Bhaskar Krishnamachari}{}
+    {SIROCCO 2023 - International Colloquium on Structural Information and Communication Complexity}{}
+
+    \resumeSubheadingTwo
+    {PhD Forum Abstract: Cooperative Problem-Solving with Systems of Constrained Mobile Agents}{}
+    {Jared Ray Coleman}{}
+    {IPSN 2023 - International Conference on Information Processing in Sensor Networks}{}
+
+    \resumeSubheadingTwo
     {Graph Convolutional Network-based Scheduler for Distributing Computation in the IoRT}{}
     {Jared Coleman, Mehrdad Kiamari, Lillian Clark, Daniel D'Souza, Bhaskar Krishnamachari}{}
     {MILCOM 2023 WS-7 - Workshop On The Internet Of Things For Adversarial Environments}{}
@@ -214,7 +230,15 @@
 
 %-----------PROJECTS-----------------
 \section{Projects}
-\resumeSubHeadingListStart
+    \resumeSubHeadingListStart
+    \resumeSubheading
+    {ChatLang (\href{https://eclipse.usc.edu/chatlang}{eclipse.usc.edu/chatlang})}{}
+    {An LLM-powered role-playing bot with parallel tutor assistance}{2023}
+
+    \resumeSubheading
+    {Kubishi Sentences (\href{https://sentences.kubishi.com}{sentences.kubishi.com})}{}
+    {An LLM-powered sentence builder/translator for the Owens Valley Paiute Language}{2023}
+
     \resumeSubheadingTwo
     {GCN-Turtlebot (\href{https://github.com/ANRGUSC/gcnschedule-turtlenet}{github.com/ANRGUSC/gcnschedule-turtlenet})}{}
     {GCN-based Scheduler for Distributing Computation in the Internet of Robotic Things}{}
