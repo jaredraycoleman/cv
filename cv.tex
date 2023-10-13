@@ -13,8 +13,7 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-% make links blue, no boxes
-\usepackage[hidelinks, colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
 
 
@@ -96,8 +95,8 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Jared Coleman} & \href{mailto:jaredraycoleman@gmail.com}{jaredraycoleman@gmail.com}\\
-  \href{https://jaredraycoleman.com/}{jaredraycoleman.com} \\
+  \textbf{\href{https://jaredraycoleman.com/}{\Large Jared Coleman}} & \href{mailto:jaredraycoleman@gmail.com}{jaredraycoleman@gmail.com}\\
+  \href{https://jaredraycoleman.com/}{https://jaredraycoleman.com} \\
 \end{tabular*}
 
 
@@ -105,7 +104,7 @@
 \section{Summary \& Skills}
 \resumeSubHeadingListStart
   \vspace{-1pt}\item[]I have a broad interest in computer science.
-  My research interests include distributed computing, internet of things (IoT), machine learning (ML), artificial intelligence (AI), blockchain, mobile robotics, discrete mathematics, computational geometry, and game theory.
+  My research interests include distributed/dispersed computing, the internet of things (IoT), blockchain, mobile robotics, discrete mathematics, computational geometry, and game theory.
   \vspace{-4pt}\item[]\textbf{Languages}: Python, C/C++, Java, JavaScript 
   %\hfill 
   \vspace{-4pt}\item[]\textbf{Technologies/Frameworks}: Docker, Tendermint, Git, React, Gitpod
@@ -160,22 +159,6 @@
 %-----------PUBLICATIONS-----------------
 \section{Publications}
 \resumeSubHeadingListStart
-    \resumeSubheadingThree
-    {DARSAN: A Decentralized Review System Suitable for NFT Marketplaces}{}
-    {Sulyab Thottungal Valapu, Tamoghna Sarkar, Jared Ray Coleman, Anusha Avyukt, Hugo Embrechts, Dimitri Torfs}{}
-    {Michele Minelli, Bhaskar Krishnamachari}{}
-    {ICBC 2023 - International Conference on Blockchain}{}
-
-    \resumeSubheadingTwo
-    {Search and Rescue on the Line}{}
-    {Jared Coleman, Lorand Cheng, Bhaskar Krishnamachari}{}
-    {SIROCCO 2023 - International Colloquium on Structural Information and Communication Complexity}{}
-
-    \resumeSubheadingTwo
-    {PhD Forum Abstract: Cooperative Problem-Solving with Systems of Constrained Mobile Agents}{}
-    {Jared Ray Coleman}{}
-    {IPSN 2023 - International Conference on Information Processing in Sensor Networks}{}
-
     \resumeSubheadingTwo
     {Graph Convolutional Network-based Scheduler for Distributing Computation in the IoRT}{}
     {Jared Coleman, Mehrdad Kiamari, Lillian Clark, Daniel D'Souza, Bhaskar Krishnamachari}{}
@@ -231,15 +214,7 @@
 
 %-----------PROJECTS-----------------
 \section{Projects}
-    \resumeSubHeadingListStart
-    \resumeSubheading
-    {ChatLang (\href{https://eclipse.usc.edu/chatlang}{eclipse.usc.edu/chatlang})}{}
-    {An LLM-powered role-playing bot with parallel tutor assistance}{2023}
-
-    \resumeSubheading
-    {Kubishi Sentences (\href{https://sentences.kubishi.com}{sentences.kubishi.com})}{}
-    {An LLM-powered sentence builder/translator for the Owens Valley Paiute Language}{2023}
-
+\resumeSubHeadingListStart
     \resumeSubheadingTwo
     {GCN-Turtlebot (\href{https://github.com/ANRGUSC/gcnschedule-turtlenet}{github.com/ANRGUSC/gcnschedule-turtlenet})}{}
     {GCN-based Scheduler for Distributing Computation in the Internet of Robotic Things}{}
