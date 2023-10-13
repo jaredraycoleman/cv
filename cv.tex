@@ -1,9 +1,3 @@
-%-------------------------
-% Resume in Latex
-% Author : Jared Coleman
-% License : MIT
-%------------------------
-
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -13,7 +7,8 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
+% make links blue, no boxes
+\usepackage[hidelinks, colorlinks=true, urlcolor=blue]{hyperref}
 \usepackage{fancyhdr}
 
 
@@ -78,6 +73,13 @@
 
 
 
+\newcommand{\pub}[3]{
+  \vspace{-1pt}\item \textbf{#1} \\ 
+    \textit{\small#2} \\
+    \textit{\small#3}\vspace{-5pt}
+}
+
+
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
@@ -87,6 +89,9 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+\newcommand{\pubListStart}{\begin{enumerate}[leftmargin=*,label={[\arabic*]}]}
+\newcommand{\pubListEnd}{\end{enumerate}}
+
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -95,22 +100,10 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://jaredraycoleman.com/}{\Large Jared Coleman}} & \href{mailto:jaredraycoleman@gmail.com}{jaredraycoleman@gmail.com}\\
-  \href{https://jaredraycoleman.com/}{https://jaredraycoleman.com} \\
+  \textbf{\Large Jared Coleman} & \href{mailto:jaredraycoleman@gmail.com}{jaredraycoleman@gmail.com}\\
+  \href{https://jaredraycoleman.com/}{jaredraycoleman.com} \\
 \end{tabular*}
 
-
-% --------SKILLS------------
-\section{Summary \& Skills}
-\resumeSubHeadingListStart
-  \vspace{-1pt}\item[]I have a broad interest in computer science.
-  My research interests include distributed/dispersed computing, the internet of things (IoT), blockchain, mobile robotics, discrete mathematics, computational geometry, and game theory.
-  \vspace{-4pt}\item[]\textbf{Languages}: Python, C/C++, Java, JavaScript 
-  %\hfill 
-  \vspace{-4pt}\item[]\textbf{Technologies/Frameworks}: Docker, Tendermint, Git, React, Gitpod
-  \vspace{-4pt}\item[]\textbf{Graduate Courses}: Advanced Algorithm Design, Distributed Systems, Formal Verification, Randomized Algorithms, Theory of Computation, High-Performance Computing, Programming Languages, Operating Systems
-
-\resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
@@ -118,32 +111,37 @@
     \resumeSubheading
       {University of Southern California}{Los Angeles, CA}
       {Ph.D. in Computer Science;  GPA: 4.0}{Aug 2020 -- Present}
+      
+      \vspace{0.25em}\hspace{0.75em}Dissertation: Dispersed Computing in Dynamic Environments \\
+      \hspace{0.75em}Advisor: Bhaskar Krishnamachari
     \resumeSubheadingTwo
       {California State University, Long Beach}{Long Beach, CA}
       {Master of Science in Computer Science;  GPA: 4.0}{Aug 2018 -- May 2020}
       {Bachelor of Science in Computer Science;  GPA: 3.6}{Aug 2013 -- May 2018}
+      
+      \vspace{0.25em}\hspace{0.75em}Thesis: Minimizing The Maximum Distance Traveled To Form Patterns With Systems of Mobile Robots \\
+      \hspace{0.75em}Advisor: Oscar Morales-Ponce
 
   \resumeSubHeadingListEnd
 
+
+% --------INTERESTS------------
+\section{Research Interests}
+\resumeSubHeadingListStart
+  \vspace{-1pt}\item[]Distributed computing, online algorithms, edge computing, internet of things (IoT), machine learning (ML), artificial intelligence (AI), blockchain, and cooperative mobile agents.
+\resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
 
-  
-    \vspace{-1pt}\item[]
-      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-        \textbf{The Aerospace Corporation} & El Segundo, CA \\
-        % \textit{\small Casual Member of the Technical Staff} & \textit{\small Aug 2020 -- Present} \\
-        \textit{\small Member of the Technical Staff} & \textit{\small Mar 2020 -- Present} \\
-        \textit{\small Associate Member of the Technical Staff} & \textit{\small Sep 2018 -- Mar 2020} \\
-        \textit{\small Intern} & \textit{\small Jan 2018 -- Aug 2018} 
-      \end{tabular*}\vspace{-5pt}
-
+    \resumeSubheadingThree
+    {The Aerospace Corporation}{El Segundo, CA}
+    {Member of the Technical Staff}{Mar 2020 -- Present}
+    {Associate Member of the Technical Staff}{Sep 2018 -- Mar 2020}
+    {Intern}{Jan 2018 -- Aug 2018}
       \resumeItemListStart
-        % \item[-]{Develop algorithms for optimizing data-processing pipelines to maximize time and resource efficiency.}
-        % \item[-]{Help build simulations for verifying flight software.}
-        \item[-]{Design software that helps Aerospace rapidly develop scalable, modular, and efficient analyses for launch vehicle verification in simulation, day-of-launch, and post-flight environments.}
+        \item[-]{Design software and algorithms for rapidly developing scalable, modular, and efficient analyses for launch vehicle verification in simulation, day-of-launch, and post-flight environments.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -153,84 +151,218 @@
         \item[-]{Developed software and simulations for systems of cooperative robots.}
       \resumeItemListEnd
 
+    \resumeSubheading
+      {Big Pine Paiute Tribe of the Owens Valley}{Big Pine, CA}
+      {IT Intern}{May 2014 -- Aug 2014}
+      \resumeItemListStart
+        \item[-]{Organized computer skills workshops for high school students in tribal work-experience program}
+        \item[-]{Developed membership management software for the tribal wellness center}
+      \resumeItemListEnd
+
   \resumeSubHeadingListEnd
+
+%-----------TEACHING-----------------
+\section{Teaching Experience}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Distributed Systems \& the Internet of Things}{Los Angeles, CA}
+      {Teaching Assistant}{Spring 2023}
+
+    \resumeSubheading
+      {Principles of Software Engineering}{Los Angeles, CA}
+      {Teaching Assistant}{Fall 2020}
+      
+    \resumeSubheading
+      {Organization of Programming Languages}{Long Beach, CA}
+      {Teaching Assistant}{Spring 2020}
+
+    \resumeSubheading
+      {Object-Oriented Application Development}{Long Beach, CA}
+      {Teaching Assistant}{Spring 2020}
+
+    \resumeSubheading
+      {Speaking}{Itajubá, MG, Brazil}
+      {English Teacher}{2016}
+  
+\resumeSubHeadingListEnd
+
+%-----------MENTORSHIP-----------------
+\section{Mentorship}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Alex Sotiropolous (Masters), Linus Lei (Undergrad)}{}
+      {Crowdsourcing LLM Fine-Tuning}{2023}
+      
+    \resumeSubheading
+      {Eric Cheng, Helen Hu, Max Li, Melanie Xiao Xuan Toh, Sana Jain (Undergrads)}{}
+      {LanguageGames: open-source modular minigames for language education}{Fall 2023}
+      
+    \resumeSubheading
+      {Eason Qin, Flora Jia, Lorena Yan (Undergrads)}{}
+      {AskANRG: LLM-powered chatbots tailored for research groups}{Fall 2023}
+      
+    \resumeSubheading
+      {Dominick Hart (High School)}{}
+      {LLM-powered NPCs for language education through video games}{Summer 2023}
+
+    \vspace{5pt}
+    \textbf{Ebrahim Hirani, Ravi Vivek Agrawal (Masters), Linus Lei, Sanjana Adapala (Undergrad)}
+    \vspace{-8pt}
+    \resumeSubheading
+      {Saamarth Seth (High School)}{}
+      {Python implementations of task graph scheduling algorithms}{2023}
+      
+    \resumeSubheading
+      {Chely Fernandez (Undergrad)}{}
+      {Blockchain-secured Industrial IoT}{2022}
+      
+    \resumeSubheading
+      {Lorand Cheng (Undergrad)}{}
+      {Search and Rescue on the Line}{2021}
+
+    \resumeSubheading
+      {Wanwiset Peerapatanapokin (Undergrad)}{}
+      {Blockchain-secured Industrial IoT}{2020}
+
+  
+\resumeSubHeadingListEnd
+
+
+%-----------TEACHING-----------------
+\section{Honors \& Awards}
+\resumeSubHeadingListStart
+
+    \resumeSubheadingTwo
+      {Cobell Scholar}{}
+      {The Cobell Scholarship}{2023-2024}
+      {Awarded to high-achieving, community-involved Native college students with leadership experience.}{}
+
+    \resumeSubheadingThree
+      {CPS Rising Star}{}
+      {2023 CPS Rising Stars Workshop}{2023}
+      {This workshop aims to identify and mentor outstanding PhD students and postdocs who are interested in }{}
+      {pursuing academic careers in Cyber-Physical Systems (CPS) related areas}{}
+    
+    \resumeSubheadingTwo
+      {First-Place Winner}{}
+      {2nd Student Design Competition on Networked Computing on the Edge @ CPS IoT Week}{2022}
+      {Graph Convolutional Network-based Scheduler for Distributing Computation in the Internet of Robotic Things}{}
+  
+\resumeSubHeadingListEnd
+
 
 
 %-----------PUBLICATIONS-----------------
 \section{Publications}
-\resumeSubHeadingListStart
-    \resumeSubheadingTwo
-    {Graph Convolutional Network-based Scheduler for Distributing Computation in the IoRT}{}
-    {Jared Coleman, Mehrdad Kiamari, Lillian Clark, Daniel D'Souza, Bhaskar Krishnamachari}{}
-    {MILCOM 2023 WS-7 - Workshop On The Internet Of Things For Adversarial Environments}{}
+\pubListStart
+    % \pub
+    % {Comparing Task Graph Scheduling Algorithms: An Adversarial Approach}
+    % {Jared Coleman and Bhaskar Krishnamachari}
+    % {In Preparation}
+    
+    % \pub
+    % {Optimal Online Delivery with a Faulty Drone}
+    % {Jared Coleman, Evangelos Kranakis, Danny Krizanc, Oscar Morales-Ponce}
+    % {Under Review --- LATIN 2024}
 
-    \resumeSubheadingTwo
-    {Delivery to Safety with Two Cooperating Robots}{}
-    {Jared Coleman, Evangelos Kranakis, Danny Krizanc, Oscar Morales-Ponce}{}
-    {SOFSEM 2023 - International Conference on Current Trends in Theory and Practice of Computer Science}{}
+    \pub
+    {Online Allocation of Sensing and Computation in Large Graphs}
+    {Xinlin Li, Merve Karakas, Osama A. Hanna, Mehrdad Kiamari, Jared Coleman, Christina Fragouli, Bhaskar Krishnamachari, Gunjan Verma}
+    {IEEE CIC 2023 --- International Conference on Collaboration and Internet Computing}
+    
+    \pub
+    {DARSAN: A Decentralized Review System Suitable for NFT Marketplaces}
+    {Sulyab Thottungal Valapu, Tamoghna Sarkar, Jared Ray Coleman, Anusha Avyukt, Hugo Embrechts, Dimitri Torfs, Michele Minelli, Bhaskar Krishnamachari}
+    {ICBC 2023 --- International Conference on Blockchain}
 
-    \resumeSubheadingTwo
-    {The Snow Plow Problem: Perpetual Maintenance by Mobile Agents on the Line}{}
-    {Jared Coleman, Oscar Morales-Ponce}{}
-    {ICDCN 2023 - International Conference on Distributed Computing and Networking}{}
+    \pub
+    {Search and Rescue on the Line}
+    {Jared Coleman, Lorand Cheng, Bhaskar Krishnamachari}
+    {SIROCCO 2023 --- International Colloquium on Structural Information and Communication Complexity}
 
-    \resumeSubheadingTwo
-    {Line Search for an Oblivious Moving Target}{}
-    {Jared Coleman, Evangelos Kranakis, Danny Krizanc, Oscar Morales-Ponce}{}
-    {OPODIS 2022 - International Conference on Principles of Distributed Systems}{}
+    \pub
+    {PhD Forum Abstract: Cooperative Problem-Solving with Systems of Constrained Mobile Agents}
+    {Jared Ray Coleman}
+    {IPSN 2023 --- International Conference on Information Processing in Sensor Networks}
 
-    \resumeSubheadingTwo
-    {Multi-Objective Network Synthesis for Dispersed Computing in Tactical Environments}{}
-    {Jared Coleman, Eugenio Grippo, Bhaskar Krishnamachari, Gunjan Verma}{}
-    {SPIE Defense + Commercial Sensing 2022}{}
+    \pub
+    {Graph Convolutional Network-based Scheduler for Distributing Computation in the IoRT}
+    {Jared Coleman, Mehrdad Kiamari, Lillian Clark, Daniel D'Souza, Bhaskar Krishnamachari}
+    {MILCOM 2023 WS-7 --- Workshop On The Internet Of Things For Adversarial Environments}
 
-    \resumeSubheadingThree
-    {Network Synthesis for Tactical Environments: Scenario, Challenges, and Opportunities}{}
-    {Tzanis Anevlavis, Jonathan Bunton, Jared Coleman, Mine Dogan, Eugenio Grippo, Abel Souza, Christina Fragouli}{}
-    {Bhaskar Krishnamachari, Matthew Maness, Karl Olson, Prashant Shenoy, Paulo Tabuada, Gunjan Verma}{}
-    {SPIE Defense + Commercial Sensing 2022}{}
+    \pub
+    {Delivery to Safety with Two Cooperating Robots}
+    {Jared Coleman, Evangelos Kranakis, Danny Krizanc, Oscar Morales-Ponce}
+    {SOFSEM 2023 --- International Conference on Current Trends in Theory and Practice of Computer Science}
 
-    \resumeSubheadingTwo
-    {Robotic Sorting on the Grid}{}
-    {Jared Coleman, Oscar Morales-Ponce}{}
-    {ICDCN 2022 - 23rd International Conference on Distributed Computing and Networking}{}
-    {}{}
+    \pub
+    {The Snow Plow Problem: Perpetual Maintenance by Mobile Agents on the Line}
+    {Jared Coleman, Oscar Morales-Ponce}
+    {ICDCN 2023 --- International Conference on Distributed Computing and Networking}
 
-    \resumeSubheadingTwo
-    {Message Delivery in the Plane by Robots with Different Speeds}{}
-    {Jared Coleman, Evangelos Kranakis, Oscar Morales-Ponce, Danny Krizanc}{}
-    {SSS 2021 - 23rd International Symposium on Stabilization, Safety, and Security of Distributed Systems}{}
+    \pub
+    {Line Search for an Oblivious Moving Target}
+    {Jared Coleman, Evangelos Kranakis, Danny Krizanc, Oscar Morales-Ponce}
+    {OPODIS 2022 --- International Conference on Principles of Distributed Systems}
 
-    \resumeSubheadingTwo
-    {The Pony Express Communication Problem}{}
-    {Jared Coleman, Evangelos Kranakis, Oscar Morales-Ponce, Danny Krizanc}{}
-    {IWOCA 2021 - 32nd International Workshop on Combinatorial Algorithms}{}
+    \pub
+    {Multi-Objective Network Synthesis for Dispersed Computing in Tactical Environments}
+    {Jared Coleman, Eugenio Grippo, Bhaskar Krishnamachari, Gunjan Verma}
+    {SPIE Defense + Commercial Sensing 2022}
 
-    \resumeSubheadingTwo
-    {Minimizing The Maximum Distance Traveled To Form Patterns With Systems of Mobile Robots}{}
-    {Jared Coleman, Evangelos Kranakis, Oscar Morales-Ponce, Jorge Urrutia, Birgit Vogtenhuber}{}
-    {CCCG 2020, 32nd Canadian Conference on Computational Geometry, August 5-7, 2020}{}
-\resumeSubHeadingListEnd
+    \pub
+    {Network Synthesis for Tactical Environments: Scenario, Challenges, and Opportunities}
+    {Tzanis Anevlavis, Jonathan Bunton, Jared Coleman, Mine Dogan, Eugenio Grippo, Abel Souza, Christina Fragouli, Bhaskar Krishnamachari, Matthew Maness, Karl Olson, Prashant Shenoy, Paulo Tabuada, Gunjan Verma}
+    {SPIE Defense + Commercial Sensing 2022}
+
+    \pub
+    {Robotic Sorting on the Grid}
+    {Jared Coleman, Oscar Morales-Ponce}
+    {ICDCN 2022 --- 23rd International Conference on Distributed Computing and Networking}
+
+    \pub
+    {Message Delivery in the Plane by Robots with Different Speeds}
+    {Jared Coleman, Evangelos Kranakis, Oscar Morales-Ponce, Danny Krizanc}
+    {SSS 2021 --- 23rd International Symposium on Stabilization, Safety, and Security of Distributed Systems}
+
+    \pub
+    {The Pony Express Communication Problem}
+    {Jared Coleman, Evangelos Kranakis, Oscar Morales-Ponce, Danny Krizanc}
+    {IWOCA 2021 --- 32nd International Workshop on Combinatorial Algorithms}
+
+    \pub
+    {Minimizing The Maximum Distance Traveled To Form Patterns With Systems of Mobile Robots}
+    {Jared Coleman, Evangelos Kranakis, Oscar Morales-Ponce, Jorge Urrutia, Birgit Vogtenhuber}
+    {CCCG 2020, 32nd Canadian Conference on Computational Geometry, August 5-7, 2020}
+\pubListEnd
 
 %-----------PROJECTS-----------------
 \section{Projects}
-\resumeSubHeadingListStart
+    \resumeSubHeadingListStart
+    \resumeSubheading
+    {ChatLang (\href{https://chatlang.net}{chatlang.net})}{}
+    {An LLM-powered role-playing bot with parallel tutor assistance}{2023}
+
+    \resumeSubheading
+    {Kubishi Sentences (\href{https://sentences.kubishi.com}{sentences.kubishi.com})}{}
+    {An LLM-powered sentence builder/translator for the Owens Valley Paiute Language}{2023}
+
     \resumeSubheadingTwo
     {GCN-Turtlebot (\href{https://github.com/ANRGUSC/gcnschedule-turtlenet}{github.com/ANRGUSC/gcnschedule-turtlenet})}{}
     {GCN-based Scheduler for Distributing Computation in the Internet of Robotic Things}{}
-    {First-place winner: 2nd Student Design Competition on Networked Computing on the Edge at CPS IoT Week 2022}{}
+    {First-place winner: 2nd Student Design Competition on Networked Computing on the Edge at CPS IoT Week}{2022}
 
     \resumeSubheading
-    {Secure IIoT}{Autonomous Networks Research Group \& Chevron}
-    {Using blockchain technology to secure industrial IoT systems}{}
+    {Secure IIoT}{Industry Partner: Chevron}
+    {Using blockchain technology to secure industrial IoT systems}{2021-2023}
 
     \resumeSubheading
     {Kubishi (\href{https://kubishi.com}{kubishi.com})}{}
     {An online dictionary and encyclopedia for Owens Valley Paiute language and culture}{2020}
     
     \resumeSubheading
-    {Aerocube @ The Beach}{CSULB \& The Aerospace Corporation}
-    {Distrubuted robotics systems for space - a proof of concept}{2017}
+    {Aerocube @ The Beach}{Industry Partner: The Aerospace Corporation}
+    {Distrubuted robotics systems for space --- a proof of concept}{2017}
 \resumeSubHeadingListEnd
 
 %-------------------------------------------
