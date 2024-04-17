@@ -7,6 +7,7 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
+\usepackage{etoolbox}
 % make links blue, no boxes
 \usepackage[hidelinks, colorlinks=true, urlcolor=blue]{hyperref}
 \usepackage{fancyhdr}
@@ -71,15 +72,6 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-
-
-\newcommand{\pub}[3]{
-  \vspace{-1pt}\item \textbf{#1} \\ 
-    \textit{\small#2} \\
-    \textit{\small#3}\vspace{-5pt}
-}
-
-
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
@@ -89,8 +81,28 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-\newcommand{\pubListStart}{\begin{enumerate}[leftmargin=*,label={[\arabic*]}]}
-\newcommand{\pubListEnd}{\end{enumerate}}
+\newenvironment{benumerate}[2][]{
+    \let\oldItem\item
+    \def\item{\addtocounter{enumi}{-2}\oldItem}
+    \begin{enumerate}[#1]
+    \setcounter{enumi}{#2}
+    \addtocounter{enumi}{1}
+}{
+    \end{enumerate}
+}
+\newcommand{\pub}[3]{
+  \vspace{-1pt}\item \textbf{#1} \\ 
+    \textit{\small#2} \\
+    \textit{\small#3}\vspace{-5pt}
+}
+% pending pub that hides the number
+\newcommand{\pendingpub}[3]{
+  \vspace{-1pt}\item[] \textbf{#1} \\ 
+    \textit{\small#2} \\
+    \textit{\small#3}\vspace{-5pt}
+}
+\newcommand{\pubListStart}[1]{\begin{benumerate}[leftmargin=*,label={[\arabic*]}]{#1}}
+\newcommand{\pubListEnd}{\end{benumerate}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -100,7 +112,7 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Jared Coleman} & \href{mailto:jaredraycoleman@gmail.com}{jaredraycoleman@gmail.com}\\
+  \textbf{\Large Jared Coleman} & \href{mailto:jared.coleman@lmu.edu}{jared.coleman@lmu.edu}\\
   \href{https://jaredraycoleman.com/}{jaredraycoleman.com} \\
 \end{tabular*}
 
@@ -110,7 +122,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Southern California}{Los Angeles, CA}
-      {Ph.D. in Computer Science;  GPA: 4.0}{Aug 2020 -- Present}
+      {Ph.D. in Computer Science;  GPA: 4.0}{Aug 2020 -- May 2024}
       
       \vspace{0.25em}\hspace{0.75em}Dissertation: Dispersed Computing in Dynamic Environments \\
       \hspace{0.75em}Advisor: Bhaskar Krishnamachari
@@ -128,16 +140,20 @@
 % --------INTERESTS------------
 \section{Research Interests}
 \resumeSubHeadingListStart
-  \vspace{-1pt}\item[]Distributed computing, online algorithms, edge computing, internet of things (IoT), machine learning (ML), artificial intelligence (AI), blockchain, and cooperative mobile agents.
+  \vspace{-1pt}\item[]Cooperative multi-agent systems, distributed computing, decentralized computing, online algorithms, distributed ledger technology, internet of things (IoT), artificial intelligence (AI), and large language models (LLMs) for language education and endangered language revitalization.
 \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
 
+    \resumeSubheading
+    {Loyola Marymount University}{Los Angeles, CA}
+    {Assistant Professor}{Aug 2024 -- Present}
+
     \resumeSubheadingThree
     {The Aerospace Corporation}{El Segundo, CA}
-    {Member of the Technical Staff}{Mar 2020 -- Present}
+    {Member of the Technical Staff}{Mar 2020 -- Jun 2024}
     {Associate Member of the Technical Staff}{Sep 2018 -- Mar 2020}
     {Intern}{Jan 2018 -- Aug 2018}
       \resumeItemListStart
@@ -155,7 +171,7 @@
       {Big Pine Paiute Tribe of the Owens Valley}{Big Pine, CA}
       {IT Intern}{May 2014 -- Aug 2014}
       \resumeItemListStart
-        \item[-]{Organized computer skills workshops for high school students in tribal work-experience program}
+        \item[-]{Organized computer skills workshops for high school students in a  tribal work experience program}
         \item[-]{Developed membership management software for the tribal wellness center}
       \resumeItemListEnd
 
@@ -184,6 +200,18 @@
       {Speaking}{Itajubá, MG, Brazil}
       {English Teacher}{2016}
   
+\resumeSubHeadingListEnd
+
+%-----------SERVICE-----------------
+\section{Professional Service}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {SC24 --- International Conference for HPC, Networking, Storage, and Analysis}{Atlanta, GA}
+      {Technical Program Committee}{Nov 17-22, 2024}
+  
+    \resumeSubheading
+      {Problem Solving with Cooperative Mobile Agent Systems}{São Carlos, Brasil}
+      {Guest Lecture at Institute of Mathematics and Computer Science, USP, São Carlos}{April 26, 2023}
 \resumeSubHeadingListEnd
 
 %-----------MENTORSHIP-----------------
@@ -245,25 +273,43 @@
     
     \resumeSubheadingTwo
       {First-Place Winner}{}
-      {2nd Student Design Competition on Networked Computing on the Edge @ CPS IoT Week}{2022}
+      {2nd Student Design Competition on Networked Computing on the Edge @ CPS IoT Week 2022}{2022}
       {Graph Convolutional Network-based Scheduler for Distributing Computation in the Internet of Robotic Things}{}
   
 \resumeSubHeadingListEnd
 
 
+% %-----------IN PROGRESS-----------------
+% \section{Works in Progress / Under Review}
+% \pubListStart{3}
+%     \pendingpub
+%     {LLM-Assisted Rule-Based Machine Translation for No-Resource Languages}
+%     {Jared Coleman and Bhaskar Krishnamachari}
+%     {In Preparation}
+
+%     \pendingpub
+%     {Comparing Task Graph Scheduling Algorithms: An Adversarial Approach}
+%     {Jared Coleman and Bhaskar Krishnamachari}
+%     {In Preparation}
+
+%     \pendingpub
+%     {Linear Search for an Escaping Target with Unknown Speed}
+%     {Jared Coleman, Dmitry Ivanov, Evangelos Kranakis, Danny Krizanc, Oscar Morales-Ponce}
+%     {In Preparation}
+    
+%     \pendingpub
+%     {Optimal Online Delivery with a Faulty Drone}
+%     {Jared Coleman, Evangelos Kranakis, Danny Krizanc, Oscar Morales-Ponce}
+%     {Under Review}
+% \pubListEnd
 
 %-----------PUBLICATIONS-----------------
 \section{Publications}
-\pubListStart
-    % \pub
-    % {Comparing Task Graph Scheduling Algorithms: An Adversarial Approach}
-    % {Jared Coleman and Bhaskar Krishnamachari}
-    % {In Preparation}
-    
-    % \pub
-    % {Optimal Online Delivery with a Faulty Drone}
-    % {Jared Coleman, Evangelos Kranakis, Danny Krizanc, Oscar Morales-Ponce}
-    % {Under Review --- LATIN 2024}
+\pubListStart{15}
+    \pub
+    {Linear Search for an Escaping Target with Unknown Speed}
+    {Jared Coleman, Dmitry Ivanov, Evangelos Kranakis, Danny Krizanc, Oscar Morales-Ponce}
+    {IWOCA 2024 --- 35th International Workshop on Combinatorial Algorithms}
 
     \pub
     {Online Allocation of Sensing and Computation in Large Graphs}
@@ -340,12 +386,12 @@
 \section{Projects}
     \resumeSubHeadingListStart
     \resumeSubheading
-    {ChatLang (\href{https://chatlang.net}{chatlang.net})}{}
-    {An LLM-powered role-playing bot with parallel tutor assistance}{2023}
+    {Kubishi Sentences (\href{https://sentences.kubishi.com}{sentences.kubishi.com})}{}
+    {LLM-powered sentence building and translation tools for the Owens Valley Paiute Language}{2024}
 
     \resumeSubheading
-    {Kubishi Sentences (\href{https://sentences.kubishi.com}{sentences.kubishi.com})}{}
-    {An LLM-powered sentence builder/translator for the Owens Valley Paiute Language}{2023}
+    {ChatLang (\href{https://chatlang.net}{chatlang.net})}{}
+    {An LLM-powered role-playing bot with parallel tutor assistance}{2023}
 
     \resumeSubheadingTwo
     {GCN-Turtlebot (\href{https://github.com/ANRGUSC/gcnschedule-turtlenet}{github.com/ANRGUSC/gcnschedule-turtlenet})}{}
