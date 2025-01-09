@@ -101,6 +101,11 @@
     \textit{\small#2} \\
     \textit{\small#3}\vspace{-5pt}
 }
+% pending pub that hides the number - no third row
+\newcommand{\pendingpubshort}[2]{
+  \vspace{-1pt}\item[] \textbf{#1} \\ 
+    \textit{\small#2}\vspace{-5pt}
+}
 \newcommand{\pubListStart}[1]{\begin{benumerate}[leftmargin=*,label={[\arabic*]}]{#1}}
 \newcommand{\pubListEnd}{\end{benumerate}}
 
@@ -140,7 +145,7 @@
 % --------INTERESTS------------
 \section{Research Interests}
 \resumeSubHeadingListStart
-  \vspace{-1pt}\item[]Cooperative multi-agent systems, distributed computing, decentralized computing, online algorithms, distributed ledger technology, internet of things (IoT), artificial intelligence (AI), and large language models (LLMs) for language education and endangered language revitalization.
+  \vspace{-1pt}\item[]Cooperative multi-agent systems, distributed computing, decentralized computing, online algorithms, distributed ledger technology, internet of things (IoT), artificial intelligence (AI), and large language models (LLMs) for endangered language revitalization.
 \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
@@ -157,7 +162,7 @@
     {Associate Member of the Technical Staff}{Sep 2018 -- Mar 2020}
     {Intern}{Jan 2018 -- Aug 2018}
       \resumeItemListStart
-        \item[-]{Design software and algorithms for rapidly developing scalable, modular, and efficient analyses for launch vehicle verification in simulation, day-of-launch, and post-flight environments.}
+        \item[-]{Designed software and algorithms for rapidly developing scalable, modular, and efficient analyses for launch vehicle verification in simulation, day-of-launch, and post-flight environments.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -181,30 +186,46 @@
 \section{Teaching Experience}
 \resumeSubHeadingListStart
     \resumeSubheading
-      {Distributed Systems \& the Internet of Things}{Los Angeles, CA}
+      {Online and Decentralized Algorithms}{Loyola Marymount University}
+      {Professor}{Spring 2025}
+
+    \resumeSubheading
+      {Algorithms and Analysis}{Loyola Marymount University}
+      {Professor}{Fall 2024, Spring 2025}
+
+    \resumeSubheading
+      {Distributed Systems \& the Internet of Things}{University of Southern California}
       {Teaching Assistant}{Spring 2023}
 
     \resumeSubheading
-      {Principles of Software Engineering}{Los Angeles, CA}
+      {Principles of Software Engineering}{University of Southern California}
       {Teaching Assistant}{Fall 2020}
       
     \resumeSubheading
-      {Organization of Programming Languages}{Long Beach, CA}
+      {Organization of Programming Languages}{California State University, Long Beach}
       {Teaching Assistant}{Spring 2020}
 
     \resumeSubheading
-      {Object-Oriented Application Development}{Long Beach, CA}
+      {Object-Oriented Application Development}{California State University, Long Beach}
       {Teaching Assistant}{Spring 2020}
-
-    \resumeSubheading
-      {Speaking}{Itajubá, MG, Brazil}
-      {English Teacher}{2016}
   
 \resumeSubHeadingListEnd
 
 %-----------SERVICE-----------------
 \section{Professional Service}
 \resumeSubHeadingListStart
+    \resumeSubheading
+      {International Journal of Computing and Technology}{}
+      {Reviewer}{January, 2025}
+
+    \resumeSubheading
+      {Journal of Computer and System Sciences}{}
+      {Reviewer}{December, 2024}
+
+    \resumeSubheading
+      {GHTC 2024 --- IEEE Global Humanitarian Technology Conference}{Philadelphia, PA}
+      {Track Chair}{Oct 23-26, 2024}
+
     \resumeSubheading
       {SC24 --- International Conference for HPC, Networking, Storage, and Analysis}{Atlanta, GA}
       {Technical Program Committee}{Nov 17-22, 2024}
@@ -215,14 +236,30 @@
 \resumeSubHeadingListEnd
 
 %-----------MENTORSHIP-----------------
-\section{Mentorship}
+\section{Mentorship / Advising}
 \resumeSubHeadingListStart
     \resumeSubheading
+      {Diego Cuadros (Undergrad)}{}
+      {Retreival Augmented Generation for LLM-powered Low-Resource Machine Translation}{2024 - present}
+    
+    \resumeSubheading
+      {Kathan Pathak (Masters)}{}
+      {Culturally Appropriate Image Generation for Language Education}{2024 - present}
+    
+    \resumeSubheading
+      {Gabriel Twigg-Ho, Matias Martinez Gonzalez, and Jason Chamorro (Undergrad)}{}
+      {Stochastic Task Graph Scheduling}{2024 - present}
+    
+    \resumeSubheading
+      {Rohin Gupta (High School)}{}
+      {Using Simulated Annealing for Task Graph Scheduling}{2024 - present}
+
+    \resumeSubheading
       {Alex Sotiropolous (Masters), Linus Lei (Undergrad)}{}
-      {Crowdsourcing LLM Fine-Tuning}{2023}
+      {Crowdsourcing LLM Fine-Tuning}{2023 - 2024}
       
     \resumeSubheading
-      {Eric Cheng, Helen Hu, Max Li, Melanie Xiao Xuan Toh, Sana Jain (Undergrads)}{}
+      {Eric Cheng, Helen Hu, Max Li, Melanie Xiao Xuan Toh, Sana Jain (Undergrad)}{}
       {LanguageGames: open-source modular minigames for language education}{Fall 2023}
       
     \resumeSubheading
@@ -255,15 +292,14 @@
   
 \resumeSubHeadingListEnd
 
-
-%-----------TEACHING-----------------
+%-----------Honors-----------------
 \section{Honors \& Awards}
 \resumeSubHeadingListStart
 
     \resumeSubheadingTwo
       {Cobell Scholar}{}
       {The Cobell Scholarship}{2023-2024}
-      {Awarded to high-achieving, community-involved Native college students with leadership experience.}{}
+      {Awarded to ``high-achieving, community-involved Native college students with leadership experience''.}{}
 
     \resumeSubheadingThree
       {CPS Rising Star}{}
@@ -280,32 +316,33 @@
 
 
 % %-----------IN PROGRESS-----------------
-% \section{Works in Progress / Under Review}
+% \section{Works Under Review}
 % \pubListStart{3}
-%     \pendingpub
-%     {LLM-Assisted Rule-Based Machine Translation for No-Resource Languages}
-%     {Jared Coleman and Bhaskar Krishnamachari}
-%     {In Preparation}
+%     \pendingpubshort
+%     {Evaluating Scheduling Algorithms for Adaptive Orchestration in Federated Tactical Edge Cloud Environments}
+%     {Jared Coleman, Bhaskar Krishnamachari, Khalil Iskarous, Ruben Rosales}
 
-%     \pendingpub
-%     {Comparing Task Graph Scheduling Algorithms: An Adversarial Approach}
-%     {Jared Coleman and Bhaskar Krishnamachari}
-%     {In Preparation}
+%     \pendingpubshort
+%     {Comparing LLM-Based Translation Approaches for Extremely Low-Resource Languages}
+%     {Alessandro Amato, Harrie Bastiaansen, Jared Coleman, Willem Datema, Mattia Fogli, Johan van der Geest, Bhaskar Krishnamachari, Thomas Kudla, Pablo Sanchez, Niranjan Suri}
 
-%     \pendingpub
+%     \pendingpubshort
 %     {Linear Search for an Escaping Target with Unknown Speed}
 %     {Jared Coleman, Dmitry Ivanov, Evangelos Kranakis, Danny Krizanc, Oscar Morales-Ponce}
-%     {In Preparation}
     
-%     \pendingpub
+%     \pendingpubshort
 %     {Optimal Online Delivery with a Faulty Drone}
 %     {Jared Coleman, Evangelos Kranakis, Danny Krizanc, Oscar Morales-Ponce}
-%     {Under Review}
 % \pubListEnd
 
 %-----------PUBLICATIONS-----------------
 \section{Publications}
-\pubListStart{16}
+\pubListStart{17}
+    \pub
+    {PISA: An Adversarial Approach To Comparing Task Graph Scheduling Algorithms}
+    {Jared Coleman, Bhaskar Krishnamachari}
+    {To Appear at IPDPS 2025 - The 39th International Parallel and Distributed Processing Symposium}
+
     \pub
     {LLM-Assisted Rule Based Machine Translation for Low/No-Resource Languages}
     {Jared Coleman, Bhaskar Krishnamachari, Khalil Iskarous, Ruben Rosales}
@@ -388,11 +425,15 @@
 \pubListEnd
 
 %-----------PROJECTS-----------------
-\section{Projects}
+\section{Other Research Products}
     \resumeSubHeadingListStart
     \resumeSubheading
     {Kubishi Sentences (\href{https://sentences.kubishi.com}{sentences.kubishi.com})}{}
-    {LLM-powered sentence building and translation tools for the Owens Valley Paiute Language}{2024}
+    {LLM-powered sentence building and translation tools for the Owens Valley Paiute Language}{2024 - present}
+
+    \resumeSubheading
+    {Kubishi Dictionary (\href{https://dictionary.kubishi.com}{dictionary.kubishi.com})}{}
+    {An online dictionary for the Owens Valley Paiute language}{2020 - present}
 
     \resumeSubheading
     {ChatLang (\href{https://chatlang.net}{chatlang.net})}{}
@@ -404,17 +445,47 @@
     {First-place winner: 2nd Student Design Competition on Networked Computing on the Edge at CPS IoT Week}{2022}
 
     \resumeSubheading
-    {Secure IIoT}{Industry Partner: Chevron}
+    {Secure IIoT Application}{Industry Partner: Chevron}
     {Using blockchain technology to secure industrial IoT systems}{2021-2023}
-
-    \resumeSubheading
-    {Kubishi (\href{https://kubishi.com}{kubishi.com})}{}
-    {An online dictionary and encyclopedia for Owens Valley Paiute language and culture}{2020}
     
     \resumeSubheading
     {Aerocube @ The Beach}{Industry Partner: The Aerospace Corporation}
     {Distrubuted robotics systems for space --- a proof of concept}{2017}
 \resumeSubHeadingListEnd
+
+
+% %-----------MEDIA-----------------
+% Imagine Hearing A Distant Relative Telling Stories in a Nearly Forgotten Language. What Would You Do? - USC Viterbi | School of Engineering
+% For Jared Coleman, Ph.D. '24, it meant developing AI tools to help revitalize Owens Valley Paiute, a critically endangered Indigenous language.
+% USC Viterbi News
+% 
+% Revitalizing Critically Endangered Languages via Large Language Models - Loyola Marymount University Newsroom
+% Assistant Professor Jared Coleman from Loyola Marymount University has developed an AI-powered translation tool to help revitalize Owens Valley Paiute, an endangered Indigenous language. His work combines traditional rule-based translation methods with advanced language models, and he has also created digital tools to support language learning and preservation efforts.
+% LMU Newsroom
+% 
+% Why some endangered language speakers have to get creative with AI preservation efforts - WHYY
+% Revitalizing endangered Indigenous languages that have little or no digital presence is challenging with artificial intelligence—but not impossible.
+% WHYY (PBS/NPR)
+\section{Media}
+\pubListStart{1}
+
+  \pendingpub
+  {\href{https://whyy.org/segments/endangered-language-speakers-get-creative-with-ai/}{Why some endangered language speakers have to get creative with AI preservation efforts}}
+  {Nichole Currie, WHYY (PBS/NPR)}
+  {December 9, 2024}
+
+  \pendingpub
+  {\href{https://newsroom.lmu.edu/campusnews/revitalizing-critically-endangered-languages-via-large-language-models/}{Revitalizing Critically Endangered Languages via Large Language Models}}
+  {Loyola Marymount University Newsroom}
+  {November 14, 2024}
+
+  \pendingpub
+  {\href{https://viterbischool.usc.edu/news/2024/06/imagine-hearing-a-distant-relative-telling-stories-in-a-nearly-forgotten-language-what-would-you-do/}{Imagine Hearing A Distant Relative Telling Stories in a Nearly Forgotten Language. What Would You Do?}}
+  {Greg Hardesty, USC Viterbi, School of Engineering}
+  {June 20, 2024}
+
+\pubListEnd
+
 
 %-------------------------------------------
 \end{document}
